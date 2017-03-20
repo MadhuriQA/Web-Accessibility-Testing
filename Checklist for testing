@@ -1,0 +1,36 @@
+
+#Checklist is used for signing off accessibility testing-
+
+1.Whether an application provides keyboard equivalents for all mouse operations and windows?
+
+2.Whether instructions are provided as a part of user documentation or manual? Is it easy to understand and operate the application using the documentation?
+
+3.Whether tabs are ordered logically to ensure smooth navigation?
+
+4.Whether shortcut keys are provided for menus?
+
+5.Whether application supports all operating systems?
+
+6.Whether response time of each screen or page is clearly mentioned so that End Users know how long to wait?
+
+7.Whether all labels are written correctly in the application?
+
+8.Whether color of the application is flexible for all users?
+
+9.Whether images or icons are used appropriately, so it's easily understood by the end users?
+
+10.Whether an application has audio alerts?
+
+11.Whether a user is able to adjust audio or video controls?
+
+12.Whether a user can override default fonts for printing and text displays?
+
+13.Whether user can adjust or disable flashing, rotating or moving displays?
+
+14.Check to ensure that color-coding is never used as the only means of conveying information or indicating an action
+
+15.Whether highlighting is viewable with inverted colors? Testing of color in the application by changing the contrast ratio
+
+16.Whether audio and video related content are properly heard by the disability people ? Test all multimedia pages with no speakers in websites
+
+17.Whether training is provided for users with disabilities that will enable them to become familiar with the software or application?
