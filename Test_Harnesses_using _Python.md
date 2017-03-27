@@ -30,36 +30,37 @@
 
 # Python test harnesses through py.test
 
-A) Using “assert” - Assertions are a systematic way to check that the internal state of a program is as the programmer expected, with the goal of catching bugs. In particular, they're good for catching false assumptions that were made while writing the code, or abuse of an interface by another programmer. Assertions are not a substitute for unit tests or system tests, but rather a complement. Because assertions are a clean way to examine the internal state of an object or function, they provide "for free" a clear-box assistance to a black-box test that examines the external behaviour.
+- Using “assert” - Assertions are a systematic way to check that the internal state of a program is as the programmer expected, with the goal of catching bugs. In particular, they're good for catching false assumptions that were made while writing the code, or abuse of an interface by another programmer. Assertions are not a substitute for unit tests or system tests, but rather a complement. Because assertions are a clean way to examine the internal state of an object or function, they provide "for free" a clear-box assistance to a black-box test that examines the external behaviour.
 
-Example - assertion $ pytest failure_demo.py
-======= test session starts ========
-arg1 = 3, arg2 = 6
-    def test_gen(arg1, arg2):
->       assert arg1 * 2 < arg2
-Execution ->       assert (3 * 2) < 6
-failure_demo.py:16: AssertionError
+- Example - assertion $ pytest failure_demo.py
+	======= test session starts ========
+ arg1 = 3, arg2 = 6
+ def test_gen(arg1, arg2):
+ >    assert arg1 * 2 < arg2
+ Execution ->  assert (3 * 2) < 6
+ failure_demo.py:16: AssertionError
 
-_______TestFailing.test_simple________
-self = <failure_demo.TestFailing object at 0xdeadbeef>
-    def test_compare(self):
-        def f():
-            return 42
-        def g():
-            return 43
->       assert f() == g()
+ _______TestFailing.test_simple________
+ 
+ self = <failure_demo.TestFailing object at 0xdeadbeef>
+ def test_compare(self):
+ def f():
+    return 42
+ def g():
+    return 43
+ > assert f() == g()
 Execution->    assert 42 == 43
 Execution->    +  where 42 = <function TestFailing.test_simple.<locals>.f at 0xdeadbeef>()
 Execution->    +  and   43 = <function TestFailing.test_simple.<locals>.g at 0xdeadbeef>()
-		failure_demo.py:29: AssertionError
+failure_demo.py:29: AssertionError
 
 _______ TestSpecialisedExplanations.test_eq_text ________
 self = <failure_demo.TestSpecialisedExplanations object at 0xdeadbeef>
-   		 def test_eq_text(self):
+		 def test_eq_text(self):
 >       assert 'spam' == 'eggs'
-Execution->       AssertionError: assert 'spam' == 'eggs'
-Execution->       - spam
-Execution->       + eggs
+Execution-> AssertionError: assert 'spam' == 'eggs'
+Execution-> - spam
+Execution-> + eggs
 failure_demo.py:43: AssertionError
 
 **Places to consider putting assertions**:
