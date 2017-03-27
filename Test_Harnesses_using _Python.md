@@ -66,7 +66,7 @@ Execution-> - spam
 Execution-> + eggs
 failure_demo.py:43: AssertionError
 ```
-**Places to consider putting assertions**:
+# Places to consider putting assertions:
 •	checking parameter types, classes, or values
 •	checking data structure invariants
 •	checking "can't happen" situations (duplicates in a list, contradictory state variables.)
@@ -80,10 +80,11 @@ Tox is a generic virtualenv management and test command line tool you can use fo
 
 **Basic example**
 First, install tox with pip install tox or easy_install tox. Then put basic information about your project and the test environments you want your project to run in into a tox.ini file residing right next to your setup.py file:
-
+```
 Comment - content of: tox.ini , put in same dir as setup.py
 [tox]
 envlist = py26,py27
 [testenv]
 deps=pytest       # install pytest in the venvs
 commands=py.test  # or 'nosetests'
+```
